@@ -1,0 +1,24 @@
+{
+    "Volumes": [
+        {
+            "Attachments": [],
+            "AvailabilityZone": "ap-southeast-2b",
+            "CreateTime": "2023-04-23T12:41:18.087000+00:00",
+            "Encrypted": false,
+            "Size": 22,
+            "SnapshotId": "",
+            "State": "available",
+            "VolumeId": "vol-083785290bcdd11be",
+            "Iops": 3000,
+            "Tags": [
+                {
+                    "Key": "Name",
+                    "Value": "FickleVolume"
+                }
+            ],
+            "VolumeType": "gp3",
+            "MultiAttachEnabled": false,
+            "Throughput": 125
+        }
+    ]
+}
