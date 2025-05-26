@@ -1,0 +1,5 @@
+*/
+*.tar.gz
+*.jar
+usercache.json
+banned*.json

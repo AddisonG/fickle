@@ -20,7 +20,7 @@ adduser --system --group --no-create-home --shell /bin/false fastapiuser
 sudo ln -siT /home/fickle/web/rpg/api/rpg-api /usr/lib/python3/dist-packages/rpg_api
 
 # Install stuff
-apt install -y npm nodejs curl nginx python3-pip jq tree
+apt install -y npm nodejs curl nginx python3-pip jq tree openjdk-21-jre-headless
 apt upgrade
 pip install uvicorn fastapi sqlalchemy
 npm install -g n
@@ -45,3 +45,11 @@ fallocate -l 1G /swapfile
 chmod 600 /swapfile
 mkswap /swapfile
 swapon /swapfile
+
+FICKLE_IP="54.253.60.92"
+REGION="ap-southeast-2"
+INSTANCE_ID="$(curl -s http://169.254.169.254/latest/meta-data/instance-id)"
+aws ec2 associate-address --instance-id "${INSTANCE_ID}" --public-ip "${FICKLE_IP}" --region "${REGION}"
+
+# Start minecraft server
+sudo -u fickle /home/fickle/minecraft/start.sh

@@ -1,0 +1,6 @@
+# Ignore all dotfiles - they are hosted on the EBS
+/.*
+!/.gitignore
+
+# Ignore the overlay - it is constantly changing, and does not belong in git
+overlay/
