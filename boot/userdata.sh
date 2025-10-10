@@ -1,7 +1,6 @@
 #!/bin/bash
 
 FICKLE_VOLUME="vol-083785290bcdd11be"
-FICKLE_ENI="eni-08100274fde510b42"
 REGION="$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone | sed 's/[a-z]$//')"
 INSTANCE_ID="$(curl -s http://169.254.169.254/latest/meta-data/instance-id)"
 

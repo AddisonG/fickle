@@ -16,12 +16,7 @@
             },
             "Overrides": [
                 {
-                    "InstanceType": "t3.large",
-                    "WeightedCapacity": 1,
-                    "SubnetId": "subnet-0e3defde9d4929559"
-                },
-                {
-                    "InstanceType": "m5.large",
+                    "InstanceType": "t3.small",
                     "WeightedCapacity": 1,
                     "SubnetId": "subnet-0e3defde9d4929559"
                 }
@@ -37,7 +32,7 @@
                     "Value": "FickleSpotRequest"
                 },
                 {
-                    "Key": "Purpose",
+                    "Key": "purpose",
                     "Value": "fickle"
                 }
             ]
