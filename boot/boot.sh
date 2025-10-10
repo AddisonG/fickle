@@ -52,4 +52,4 @@ INSTANCE_ID="$(curl -s http://169.254.169.254/latest/meta-data/instance-id)"
 aws ec2 associate-address --instance-id "${INSTANCE_ID}" --public-ip "${FICKLE_IP}" --region "${REGION}"
 
 # Start minecraft server
-sudo -u fickle /home/fickle/minecraft/start.sh
+#sudo -u fickle /home/fickle/minecraft/start.sh
