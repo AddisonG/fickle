@@ -46,4 +46,4 @@ update_tag "running boot script"
 
 /home/fickle/boot/boot.sh
 
-update_tag "complete"
+update_tag "completed boot with status '$?'"
