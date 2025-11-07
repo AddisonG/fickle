@@ -11,14 +11,13 @@ There can only be one Fickle at a time. It is tied to the server IP address.
 ## Anatomy
 Fickle is just an ordinary EC2 instance, usually an Ubuntu Image.
 
-Any server can become Fickle after running the `/boot/userdata.sh` script, but
+Any server can become Fickle after running the `userdata` script, but
 it should probably only be run on instance start. Thus, this userdata script
-is usually copied into a launch template user data.
+should be copied into a launch template user data.
 
 The userdata script does a few things, but most critically it:
  - Attaches the FickleOverlayVolume, and mounts it at `/home/fickle`
  - Runs the boot script
- - Gives Fickle an IP address
 
 The boot script is separate from the userdata script because the userdata
 script must not be excessively large, and it is annoying to change.
